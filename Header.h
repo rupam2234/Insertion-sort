@@ -4,16 +4,14 @@ using namespace std;
 
 class InsertionSort
 {
-    // initializing the 
     
 	int index, j, arrsize, key;
 	int arr[30];
-	
-	
 
 	void getarray();
 	void disp();
 
+// wrapping up the functions	
 public:
 	void takearr() {
 		getarray();
@@ -25,6 +23,7 @@ public:
 	
 };
 
+// function body for getting the unsorted array
 void InsertionSort :: getarray()
 	{
 
@@ -44,13 +43,16 @@ void InsertionSort :: getarray()
 
 		while ((key < arr[j]) && (j >= 0))
 		{
-			arr[j + 1] = arr[j];    //moves element forward
+			arr[j + 1] = arr[j];    //this will moves "j" forward in the array
 			j = j - 1;
 		}
 
-		arr[j + 1] = key;    //insert element in proper place
+		arr[j + 1] = key;    //it will insert key element in proper place
 	}
 }
+
+
+//function body for displaying the sorted array
 
 void InsertionSort::disp()
 {
@@ -61,3 +63,5 @@ void InsertionSort::disp()
 			}
 
 }
+
+// the main function is in the "source.cpp" file 
